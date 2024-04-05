@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.logo h1 {
+    background-image: url("https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-2/pattern.jpeg");
+    text-align: center;
+    font-size: 80px;
+    color: khaki;
+    margin: 20px 0;
+}
+
+.category {
+    background-color: #ff5733;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.product img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.product .description {
+    flex: 1;
+}
+
+.price {
+    font-weight: bold;
+    color: blue;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.fondoDirecciones {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+
+.direccion {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    font-size: 22px;
+    line-height: 2;
+    height: 300px;
+    width: 300px;
+    color: white; /* Agregado */
+    flex-shrink: 1;
+}
+
+.locations {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+}
+
+.direccion1 {
+    box-sizing: border-box;
+    display: flex;
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 2;
+    left: 170px;
+    flex-shrink: 1;
+}
+
+.direccion2 {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    z-index: 2;
+    right: 170px;
+}
+
+.direccion3 {
+    justify-content: space-around;
+    display: flex;
+    position: absolute;
+    z-index: 2;
+}
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 768px) {
+    /* Estilos para dispositivos móviles */
+    .logo h1 {
+        font-size: auto;
+    }
+    .product {
+        flex-direction: column; /* Cambia la dirección de flexbox para apilar verticalmente */
+        text-align: center; /* Centra el texto */
+    }
+
+    .product img {
+        width: 100px; /* Tamaño ajustado para dispositivos móviles */
+        margin: 0 auto 10px auto; /* Ajusta el margen para separar la imagen del texto */
+    }
+
+    /* Estilos para las direcciones */
+    .fondoDirecciones {
+        display: none; /* Oculta las direcciones en dispositivos móviles */
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Estilos para tablets */
+    .product {
+        flex-direction: column; /* Cambia la dirección de flexbox para apilar verticalmente */
+        text-align: center; /* Centra el texto */
+    }
+
+    .product img {
+        width: 150px; /* Tamaño ajustado para tablets */
+        margin: 0 auto 10px auto; /* Ajusta el margen para separar la imagen del texto */
+    }
+
+    /* Estilos para las direcciones */
+    .fondoDirecciones {
+        display: none; /* Oculta las direcciones en dispositivos móviles */
+    }
+  
+}
