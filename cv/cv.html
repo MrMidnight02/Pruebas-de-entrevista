@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hilda Garcia - CV</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Hilda Garcia</h1>
+    <h2>Desarrollador Web</h2>
+    <nav>
+      <ul>
+        <li><a href="#about-section">Acerca de mí</a></li>
+        <li><a href="#skills-section">Habilidades</a></li>
+        <li><a href="#experience-section">Experiencia</a></li>
+        <li><a href="#contact-section">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about-section" class="about-section">
+    <h3>About</h3>
+    <p>Desarrollador web innovador con experiencia en JavaScript, desarrollo Java, y sólidos conocimientos en manejo de bases de datos y Excel. Destacada participación como Desarrolladora Web en Laboratoria y experiencia educativa en Telmex Hub, donde impartí cursos de programación. Mi enfoque no solo abarca el desarrollo de soluciones innovadoras, sino también la formación y el crecimiento de la comunidad tecnológica.</p>
+  </section>
+
+  <section id="skills-section" class="skills-section">
+    <h3>Skills</h3>
+    <ul>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Javascript</li>
+      <li>SQL</li>
+      <li>Git</li>
+      <li>Unit Testing</li>
+      <li>API Integration</li>
+      <li>Node.js</li>
+      <li>React</li>
+      <li>Java</li>
+      <li>Figma</li>
+      <li>Trello</li>
+      <li>Unit Testing (JUnit)</li>
+      <li>Microsoft Excel</li>
+      <li>Microsoft Office/Microsoft 365</li>
+      <li>CMD</li>
+    </ul>
+  </section>
+  
+  <section id="experience-section" class="experience-section">
+    <h3>Experience</h3>
+    <article>
+      <h4>Desarrolladora Web (JavaScript, Java)</h4>
+      <p>Laboratoria</p>
+      <p>Dec '22 - Dec '23</p>
+      <ul>
+        <li>Destaque en la creación de páginas de compra personalizadas para restaurantes Y, lo que resultó en un aumento del 25% en la participación del cliente y las tasas.</li>
+        <li>Integré inteligencia artificial en sistemas de bases de datos para tiendas de productos eléctricos, logrando una mejora del 85% en la interacción del usuario y la recuperación de datos.</li>
+        <li>Contribuí a aumentar la eficiencia del proyecto en un 35% a través de la colaboración del diseño e implementación de soluciones innovadoras.</li>
+      </ul>
+    </article>
+    <article>
+      <h4>Hub-Colaborador</h4>
+      <p>Telmex</p>
+      <p>Dec '17 - Dec '19</p>
+      <ul>
+        <li>Mejore las tasas de finalización de los cursos en un 28% a través de tutoría personalizada y apoyo a los estudiantes que aprenden programación en e.</li>
+        <li>Diseñé estrategias eficaces que resultaron en un aumento del 50% en el número de preguntas y participación diaria, fomentando así una mayor participación y comprensión.</li>
+        <li>Facilité el diseño y entrega de cursos de programación, enfocados en la plataforma Blockly, lo cual contribuyó a la captación y comprensión avanzada del tema, superando el entendimiento al curso en un 25%.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section id="contact-section" class="contact-section">
+    <h3>Contact</h3>
+    <p>Email: ihildacc@gmail.com</p>
+    <p>Phone: 7771415612</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/hilda-cc-6a12832a1/">Hilda Garcia</a></p>
+  </section>
+
+  <button id="generatePdfBtn">Generar PDF</button>
+
+  <script>
+    document.getElementById('generatePdfBtn').addEventListener('click', function() {
+      const element = document.getElementById('contentToConvert');
+      const opt = {
+          margin:       1,
+          filename:     'Hilda_Garcia_CV.pdf',
+          image:        { type: 'jpeg', quality: 0.98 },
+          html2canvas:  { scale: 2 },
+          jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+      };
+
+      // Inicia la conversión
+      html2pdf().set(opt).from(element).save();
+    });
+  </script>
+</body>
+</html>
